@@ -12,15 +12,14 @@ Trabajo Práctico Especial: análisis del conjunto de datos **CKF-NHANES** sobre
 
 ```
 .
-├── README.md                 # Este archivo
-├── requirements.txt          # Dependencias de Python (pip)
-├── Informe_TPE_Grupo_XX.docx # Informe con hallazgos y conclusiones (agregar también el PDF si corresponde)
-├── TPE_Grupo_XX.ipynb        # Notebook de Jupyter con todo el análisis
-└── data/
-    └── <archivo_de_datos>.csv  # Conjunto de datos CKF-NHANES
+├── README.md                    # Este archivo
+├── requirements.txt             # Dependencias de Python (pip)
+├── TPE_Ciencia_de_Datos.ipynb   # Notebook de Jupyter con todo el análisis
+├── Informe.docx                 # Informe con hallazgos y conclusiones
+├── dataset.csv                  # Conjunto de datos CKF-NHANES
+├── metadata.docx                # Guía de contexto y diccionario de variables (material de la cátedra)
+└── .gitignore
 ```
-
-> **Pendiente:** ajustar los nombres de archivo de esta sección a los definitivos.
 
 ## Qué hace el trabajo
 
@@ -31,21 +30,23 @@ La notebook implementa, organizada en secciones, los requerimientos del enunciad
 3. Planteo de tres hipótesis propias (univariada, bivariada y multivariada).
 4. Validación de las tres hipótesis propias y de las tres provistas por la cátedra.
 
-El informe referencia explícitamente las secciones de la notebook en las que se realiza cada cálculo.
+El informe (`Informe.docx`) referencia explícitamente las secciones de la notebook en las que se realiza cada cálculo.
 
 ## Requisitos previos
 
 - **Python 3.X** (completar con la versión usada, por ejemplo 3.11).
 - `pip` y `venv` (incluidos en las instalaciones estándar de Python).
-- Jupyter (se instala con `requirements.txt`).
+- Git, para clonar el repositorio.
+
+Jupyter y el resto de las librerías se instalan con `requirements.txt`.
 
 ## Instrucciones de ejecución
 
 ### 1. Clonar el repositorio
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd <NOMBRE_DEL_REPOSITORIO>
+git clone https://github.com/neouuuu/TPE-Fundamentos-de-la-Ciencia-de-Datos.git
+cd TPE-Fundamentos-de-la-Ciencia-de-Datos
 ```
 
 ### 2. Crear y activar un entorno virtual
@@ -78,27 +79,27 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 4. Verificar que el archivo de datos esté en su lugar
+### 4. Verificar el archivo de datos
 
-El archivo de datos se incluye en el repositorio, en la carpeta `data/`. La notebook lo lee mediante una ruta **relativa** (`data/<archivo_de_datos>.csv`), por lo que debe ejecutarse desde la raíz del repositorio y no hace falta modificar ninguna ruta.
+El archivo de datos (`dataset.csv`) está incluido en la raíz del repositorio. La notebook lo lee con una ruta **relativa** (`dataset.csv`), por lo que debe abrirse y ejecutarse desde la raíz del repositorio. No hace falta modificar ninguna ruta.
 
 ### 5. Abrir y ejecutar la notebook
 
 ```bash
-jupyter notebook TPE_Grupo_XX.ipynb
+jupyter notebook TPE_Ciencia_de_Datos.ipynb
 ```
 
-(o `jupyter lab TPE_Grupo_XX.ipynb`). Una vez abierta, ejecutar todas las celdas en orden con **Kernel → Restart & Run All**. La notebook debe correr de principio a fin sin errores ni intervención manual.
+(o `jupyter lab TPE_Ciencia_de_Datos.ipynb`). Una vez abierta, ejecutar todas las celdas en orden con **Kernel → Restart & Run All**. La notebook corre de principio a fin sin errores ni intervención manual.
 
 Alternativa por línea de comandos, sin abrir la interfaz:
 
 ```bash
-jupyter nbconvert --to notebook --execute TPE_Grupo_XX.ipynb --output TPE_Grupo_XX_ejecutada.ipynb
+jupyter nbconvert --to notebook --execute TPE_Ciencia_de_Datos.ipynb --output TPE_Ciencia_de_Datos_ejecutada.ipynb
 ```
 
 ## Estructura de la notebook
 
-> **Pendiente:** completar con las secciones reales cuando esté terminada la notebook y mantenerlas sincronizadas con las referencias del informe.
+> **Pendiente:** reemplazar esta tabla por las secciones reales de la notebook y mantenerlas sincronizadas con las referencias del informe.
 
 | Sección | Contenido |
 | --- | --- |
@@ -114,7 +115,7 @@ jupyter nbconvert --to notebook --execute TPE_Grupo_XX.ipynb --output TPE_Grupo_
 
 ## Sobre los datos
 
-Cada fila corresponde a una persona examinada en la encuesta NHANES 2021-2023. Las columnas combinan datos demográficos, medidas corporales, presión arterial, análisis de sangre y orina, antecedentes declarados y variables derivadas de función renal (eGFR con la ecuación CKD-EPI 2021, `ckd_stage` y `ckd_present`). El diccionario completo de variables se encuentra en el informe y en la documentación provista por la cátedra.
+Cada fila corresponde a una persona examinada en la encuesta NHANES 2021-2023. Las columnas combinan datos demográficos, medidas corporales, presión arterial, análisis de sangre y orina, antecedentes declarados y variables derivadas de función renal (eGFR con la ecuación CKD-EPI 2021, `ckd_stage` y `ckd_present`). El diccionario completo de variables se encuentra en `metadata.docx`.
 
 ## Notas
 
