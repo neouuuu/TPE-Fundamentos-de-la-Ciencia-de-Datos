@@ -1,0 +1,26 @@
+# ============================================================================
+# requirements.txt - PENDIENTE DE COMPLETAR
+# ----------------------------------------------------------------------------
+# Todavia no se sabe que librerias se van a usar en el trabajo.
+# Cuando la notebook este terminada:
+#   1. Crear un entorno virtual limpio (python -m venv .venv) y activarlo.
+#   2. Instalar SOLO lo que la notebook importa realmente.
+#   3. Ejecutar:  pip freeze > requirements.txt
+#      (o usar pipreqs/pip-chill para listar solo lo necesario)
+#   4. Probar en otro entorno limpio: pip install -r requirements.txt
+#      y correr la notebook con "Restart & Run All".
+#   5. Borrar este encabezado y las lineas de ejemplo de abajo.
+#
+# Candidatas probables (descomentar y fijar versiones solo las que se usen):
+# ============================================================================
+
+# notebook
+# jupyterlab
+# ipykernel
+# numpy
+# pandas
+# scipy
+# matplotlib
+# seaborn
+# statsmodels
+# scikit-learn
